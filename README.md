@@ -1,2 +1,2 @@
 # Keyword-Alert-System
-An event-driven notification system
+A Realtime GitHub keyword monitoring and notification system.
