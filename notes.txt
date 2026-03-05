@@ -1,0 +1,51 @@
+Project Structure:
+                          +---------------------+
+                          |     GitHub API      |
+                          |  REST + GraphQL     |
+                          +----------+----------+
+                                     |
+                                     | Polling
+                                     v
+                         +-----------------------+
+                         |    Ingestion Worker   |
+                         |  (Fetch GitHub data)  |
+                         +----------+------------+
+                                    |
+                                    | create events
+                                    v
+                          +----------------------+
+                          |      Redis Queue     |
+                          |   (Event Buffer)     |
+                          +----------+-----------+
+                                     |
+                                     | process events
+                                     v
+                         +------------------------+
+                         |   Notification Worker  |
+                         | keyword matching       |
+                         | subscription matching  |
+                         +-----------+------------+
+                                     |
+                                     | store results
+                                     v
+                              +-------------+
+                              | PostgreSQL  |
+                              | subscriptions|
+                              | notifications|
+                              +------+------+
+                                     |
+                                     | realtime push
+                                     v
+                         +-------------------------+
+                         |   WebSocket Gateway     |
+                         |      (Socket.io)        |
+                         +-----------+-------------+
+                                     |
+                                     | persistent connection
+                                     v
+                         +--------------------------+
+                         |        Frontend          |
+                         |       (Next.js)          |
+                         +--------------------------+
+
+                         
