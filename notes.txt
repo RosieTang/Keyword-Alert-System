@@ -49,3 +49,9 @@ Project Structure:
                          +--------------------------+
 
                          
+Get Started:
+       # initiaize project 
+       npm init -y
+
+       
+

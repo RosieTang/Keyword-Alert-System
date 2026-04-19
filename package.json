@@ -1,0 +1,15 @@
+{
+  "name": "keyword-alert-system",
+  "version": "1.0.0",
+  "description": "A Realtime GitHub keyword monitoring and notification system.",
+  "private": true,
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "db:setup": "psql $DATABASE_URL -f database/schema.sql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
